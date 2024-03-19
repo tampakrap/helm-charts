@@ -1,0 +1,5 @@
+*.tgz
+
+# IDE or Editor-specific
+.idea/
+.vscode/
