@@ -8,8 +8,8 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 27228
       protocol: TCP
-      name: http
+      name: callback
   selector:
     {{- include "spotify-auth-proxy.selectorLabels" . | nindent 4 }}
