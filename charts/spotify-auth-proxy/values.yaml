@@ -14,6 +14,37 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# This is the secret that includes the client credentials.
+# Below are the secret keys and their equivalent env vars:
+# (required) spotifyClientID -> SPOTIFY_CLIENT_ID
+# (required) spotifyClientSecret -> SPOTIFY_CLIENT_SECRET
+clientCredentialsSecret:
+  # Specifies whether the client credentials secret should be created. If set
+  # to false, then a manually created secret is expected in order to set the
+  # values of the environment variables described above.
+  create: true
+  # The name of the secret. If not set, a name is generated using the fullname template.
+  # If create is true, then this is the name of the secret that helm will create
+  # If create is false, then this is the name of the manually created secret.
+  name: ""
+  # Annotations to add to the secret
+  annotations: {}
+  # Required secret keys (only if "create" is "true")
+  spotifyClientID:
+  spotifyClientSecret:
+
+proxyAPIKeySecret:
+  create: false
+  external: false
+  # The name of the secret. If not set, a name is generated using the fullname template.
+  name: ""
+  # Annotations to add to the secret
+  annotations: {}
+  spotifyProxyAPIKey:
+
+# (Optional) This sets the SPOTIFY_PROXY_BASE_URL env var
+#spotifyProxyBaseURL:
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: false

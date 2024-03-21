@@ -40,6 +40,28 @@ spec:
             - name: callback
               containerPort: 27228
               protocol: TCP
+          env:
+            - name: SPOTIFY_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "spotify-auth-proxy.clientCredentialsSecretName" . }}
+                  key: spotifyClientID
+            - name: SPOTIFY_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "spotify-auth-proxy.clientCredentialsSecretName" . }}
+                  key: spotifyClientSecret
+            {{- if or .Values.proxyAPIKeySecret.create .Values.proxyAPIKeySecret.external }}
+            - name: SPOTIFY_PROXY_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "spotify-auth-proxy.proxyAPIKeySecretName" . }}
+                  key: spotifyProxyAPIKey
+            {{- end }}
+            {{- if .Values.spotifyProxyBaseURL }}
+            - name: SPOTIFY_PROXY_BASE_URL
+              value: {{ .Values.spotifyProxyBaseURL }}
+            {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

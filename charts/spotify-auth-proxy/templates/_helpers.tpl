@@ -60,3 +60,25 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create the name of the client credentials secret to use
+*/}}
+{{- define "spotify-auth-proxy.clientCredentialsSecretName" -}}
+{{- if .Values.clientCredentialsSecret.name -}}
+    {{ .Values.clientCredentialsSecret.name }}
+{{- else -}}
+    {{ template "spotify-auth-proxy.fullname" . }}-credentials
+{{- end -}}
+{{- end -}}
+
+{{/*
+Create the name of the proxy API Key secret to use
+*/}}
+{{- define "spotify-auth-proxy.proxyAPIKeySecretName" -}}
+{{- if .Values.proxyAPIKeySecret.name -}}
+    {{ .Values.proxyAPIKeySecret.name }}
+{{- else -}}
+    {{ template "spotify-auth-proxy.fullname" . }}-api-key
+{{- end -}}
+{{- end -}}
