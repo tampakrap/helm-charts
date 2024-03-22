@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/conradludgate/spotify-auth-proxy
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: main
 
 imagePullSecrets: []
 nameOverride: ""
@@ -104,12 +104,12 @@ resources: {}
 
 livenessProbe:
   httpGet:
-    path: /
-    port: http
+    path: /health
+    port: 27228
 readinessProbe:
   httpGet:
-    path: /
-    port: http
+    path: /health
+    port: 27228
 
 autoscaling:
   enabled: false
