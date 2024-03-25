@@ -14,7 +14,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-# This is the secret that includes the client credentials.
+# This is the secret that sets the client credentials.
 # Below are the secret keys and their equivalent env vars:
 # (required) spotifyClientID -> SPOTIFY_CLIENT_ID
 # (required) spotifyClientSecret -> SPOTIFY_CLIENT_SECRET
@@ -33,6 +33,7 @@ clientCredentialsSecret:
   spotifyClientID:
   spotifyClientSecret:
 
+# (Optional) The secret that sets the SPOTIFY_PROXY_API_KEY env var.
 proxyAPIKeySecret:
   create: false
   external: false
