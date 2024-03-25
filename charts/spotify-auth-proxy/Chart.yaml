@@ -23,3 +23,6 @@ version: 0.2.0
 # It is recommended to use it with quotes.
 # Change to 0.2.7 as soon as this ticket gets fixed https://github.com/conradludgate/terraform-provider-spotify/issues/45
 appVersion: "0.2.6"
+
+maintainers:
+- name: tampakrap
