@@ -22,26 +22,31 @@ clientCredentialsSecret:
   # Specifies whether the client credentials secret should be created. If set
   # to false, then a manually created secret is expected in order to set the
   # values of the environment variables described above.
-  create: true
+  create: false
   # The name of the secret. If not set, a name is generated using the fullname template.
   # If create is true, then this is the name of the secret that helm will create
   # If create is false, then this is the name of the manually created secret.
   name: ""
   # Annotations to add to the secret
   annotations: {}
-  # Required secret keys (only if "create" is "true")
-  spotifyClientID:
-  spotifyClientSecret:
+  # Required secret keys (only if "create: true")
+  # spotifyClientID:
+  # spotifyClientSecret:
 
 # (Optional) The secret that sets the SPOTIFY_PROXY_API_KEY env var.
 proxyAPIKeySecret:
+  # Specifies whether the proxy API Key secret should be created.
   create: false
+  # If external is true, then a manually created secret is expected in order to
+  # set the value of the environment variable described above.
+  # If both "create" and "external" are true, then the "external" prevails.
   external: false
   # The name of the secret. If not set, a name is generated using the fullname template.
   name: ""
   # Annotations to add to the secret
   annotations: {}
-  spotifyProxyAPIKey:
+  # Required secret key (only if "create: true" and "external: false")
+  # spotifyProxyAPIKey:
 
 # (Optional) This sets the SPOTIFY_PROXY_BASE_URL env var
 spotifyProxyBaseURL: ""
