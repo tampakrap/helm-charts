@@ -58,9 +58,9 @@ spec:
                   name: {{ template "spotify-auth-proxy.proxyAPIKeySecretName" . }}
                   key: spotifyProxyAPIKey
             {{- end }}
-            {{- if .Values.spotifyProxyBaseURL }}
-            - name: SPOTIFY_PROXY_BASE_URL
-              value: {{ .Values.spotifyProxyBaseURL }}
+            {{- if .Values.spotifyProxyBaseURI }}
+            - name: SPOTIFY_PROXY_BASE_URI
+              value: {{ .Values.spotifyProxyBaseURI }}
             {{- end }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}

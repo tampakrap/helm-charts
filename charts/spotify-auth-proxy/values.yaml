@@ -48,8 +48,8 @@ proxyAPIKeySecret:
   # Required secret key (only if "create: true" and "external: false")
   # spotifyProxyAPIKey:
 
-# (Optional) This sets the SPOTIFY_PROXY_BASE_URL env var
-spotifyProxyBaseURL: ""
+# (Optional) This sets the SPOTIFY_PROXY_BASE_URI env var
+spotifyProxyBaseURI: ""
 
 serviceAccount:
   # Specifies whether a service account should be created

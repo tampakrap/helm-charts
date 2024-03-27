@@ -40,10 +40,11 @@ Environment Variable | Required/Optional | Default value
 SPOTIFY_CLIENT_ID | Required |
 SPOTIFY_CLIENT_SECRET | Required |
 SPOTIFY_PROXY_API_KEY | Optional |
-SPOTIFY_PROXY_BASE_URL | Optional | http://localhost:27228
+SPOTIFY_PROXY_BASE_URI | Optional | http://localhost:27228
 
 See the
-[README](https://github.com/conradludgate/terraform-provider-spotify/blob/main/spotify_auth_proxy/README.md) of `Spotify-Auth-Proxy` for more details on them.
+[README](https://github.com/conradludgate/terraform-provider-spotify/blob/main/spotify_auth_proxy/README.md)
+of `Spotify-Auth-Proxy` for more details on them.
 
 In the helm chart, the first three are set up via secrets, while the fourth via
 a plain text variable.
@@ -58,5 +59,5 @@ which can also be either created by the helm chart or it can be manually
 created. Search for the variable `proxyAPIKeySecret` in `values.yaml` and read
 the comments for more details.
 
-The `SPOTIFY_PROXY_BASE_URL` is not a secret, it can be set via a variable,
-which is named `spotifyProxyBaseURL`.
+The `SPOTIFY_PROXY_BASE_URI` is not a secret, it can be set via a variable,
+which is named `spotifyProxyBaseURI`.
