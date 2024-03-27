@@ -13,6 +13,7 @@ client and the Spotify OAuth API.
 - [Introduction](#introduction)
 - [Prerequisities](#prerequisities)
 - [Configuration](#configuration)
+- [Usage](#usage)
 
 ## Introduction
 
@@ -61,3 +62,38 @@ the comments for more details.
 
 The `SPOTIFY_PROXY_BASE_URI` is not a secret, it can be set via a variable,
 which is named `spotifyProxyBaseURI`.
+
+Example values.yaml files:
+- [with the secrets managed by this helm chart](charts/spotify-auth-proxy/ci/ci-create-secrets-values.yaml)
+- [with external secrets](charts/spotify-auth-proxy/ci/ci-external-secrets-values.yaml)
+
+## Usage
+
+After setting up the environment variables as described above, and after
+installing the helm chart, you should have one StatefulSet with one replica
+running. Check the logs of that pod, it should output something like the
+following (replace `spotify-auth-proxy` in case you have set different name):
+
+```
+➜ kubectl -n spotify-auth-proxy logs spotify-auth-proxy-0
+APIKey:   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Auth URL: ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+```
+
+If the `SPOTIFY_PROXY_API_KEY` is set, then the log will output only the Auth
+URL.
+
+Open the Auth URL on your browser in order to log in. In case the Auth URL is
+only accessible for localhost, then you can set a port forward:
+
+```
+➜ kubectl -n spotify-auth-proxy port-forward svc/spotify-auth-proxy 27228
+Forwarding from 127.0.0.1:27228 -> 27228
+Forwarding from [::1]:27228 -> 27228
+```
+
+Open the URL with a browser in order to login. As soon as the Authentication is
+successful, then you can use the API Key either in the [Terraform Spotify
+provider](https://github.com/conradludgate/terraform-provider-spotify) or in
+the [Crossplane Spotify
+provider](https://github.com/tampakrap/provider-spotify).
