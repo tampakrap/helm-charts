@@ -1,0 +1,7 @@
+---
+clientCredentialsSecret:
+  create: true
+  spotifyClientID: test1
+  spotifyClientSecret: test2
+
+spotifyProxyBaseURI: http://external.url:27228

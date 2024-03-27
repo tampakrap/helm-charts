@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "spotify-auth-proxy.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "spotify-auth-proxy.fullname" . }}:{{ .Values.service.port }}/{{ .Values.livenessProbe.httpGet.path }}']
   restartPolicy: Never
