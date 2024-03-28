@@ -1,6 +1,11 @@
 apiVersion: v2
 name: spotify-auth-proxy
-description: A Helm chart for spotify-auth-proxy
+description: A Helm chart for Spotify-Auth-Proxy
+home: https://github.com/conradludgate/terraform-provider-spotify/tree/main/spotify_auth_proxy
+sources:
+- https://github.com/conradludgate/terraform-provider-spotify/tree/main/spotify_auth_proxy
+maintainers:
+- name: tampakrap
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -15,14 +20,11 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.0
+version: 0.2.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-# Change to 0.2.7 as soon as this ticket gets fixed https://github.com/conradludgate/terraform-provider-spotify/issues/45
-appVersion: "0.2.6"
-
-maintainers:
-- name: tampakrap
+# https://github.com/conradludgate/terraform-provider-spotify/issues/45
+appVersion: "0.2.7"

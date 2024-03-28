@@ -8,6 +8,7 @@ image:
   repository: ghcr.io/conradludgate/spotify-auth-proxy
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
+  # Switch back to empty string as soon as this ticket is fixed https://github.com/conradludgate/terraform-provider-spotify/issues/45
   tag: main
 
 imagePullSecrets: []
