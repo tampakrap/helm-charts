@@ -1,1 +1,26 @@
-
+apiVersion: v1
+entries:
+  spotify-auth-proxy:
+  - apiVersion: v2
+    appVersion: 0.2.6
+    created: "2024-03-27T22:11:16.576165075Z"
+    description: A Helm chart for spotify-auth-proxy
+    digest: c7de0cb9e570ee9dfff9d5f48ef464ea846d49406ecc53ddef233f39a800836e
+    maintainers:
+    - name: tampakrap
+    name: spotify-auth-proxy
+    type: application
+    urls:
+    - https://github.com/tampakrap/spotify-auth-proxy-helm-charts/releases/download/spotify-auth-proxy-0.2.0/spotify-auth-proxy-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.2.6
+    created: "2024-03-28T06:17:26.921609306Z"
+    description: A Helm chart for spotify-auth-proxy
+    digest: 1d43a5a19e8094e50228b855aa21dc7e01cac72d515e697fec8be0eade8d598f
+    name: spotify-auth-proxy
+    type: application
+    urls:
+    - https://github.com/tampakrap/helm-charts/releases/download/spotify-auth-proxy-0.1.0/spotify-auth-proxy-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-28T06:17:26.921617461Z"
