@@ -98,6 +98,6 @@ Forwarding from [::1]:27228 -> 27228
 
 Open the URL with a browser in order to login. As soon as the Authentication is
 successful, then you can use the API Key either in the [Terraform Spotify
-provider](https://github.com/conradludgate/terraform-provider-spotify) or in
+provider](https://registry.terraform.io/providers/conradludgate/spotify) or in
 the [Crossplane Spotify
-provider](https://github.com/tampakrap/provider-spotify).
+provider](https://marketplace.upbound.io/providers/crossplane-contrib/provider-spotify).
