@@ -1,9 +1,9 @@
 # Helm Charts <!-- omit in toc -->
 
-[![Lint Code Base](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/linter.yaml/badge.svg)](https://github.com/tampakrap/spotify-auth-charts-helm-charts/actions/workflows/linter.yaml)
-[![Lint and Test Charts](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/tampakrap/spotify-auth-helm-charts/actions/workflows/lint-test.yaml)
-[![Release Charts](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/release.yaml)
-[![pages-build-deployment](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/tampakrap/spotify-auth-proxy-helm-charts/actions/workflows/pages/pages-build-deployment)
+[![Lint Code Base](https://github.com/tampakrap/helm-charts/actions/workflows/linter.yaml/badge.svg)](https://github.com/tampakrap/helm-charts/actions/workflows/linter.yaml)
+[![Lint and Test Charts](https://github.com/tampakrap/helm-charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/tampakrap/helm-charts/actions/workflows/lint-test.yaml)
+[![Release Charts](https://github.com/tampakrap/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/tampakrap/helm-charts/actions/workflows/release.yaml)
+[![pages-build-deployment](https://github.com/tampakrap/helm-charts/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/tampakrap/helm-charts/actions/workflows/pages/pages-build-deployment)
 
 Various helm charts of applications that I use.
 
